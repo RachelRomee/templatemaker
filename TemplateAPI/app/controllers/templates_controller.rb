@@ -6,11 +6,12 @@ class TemplatesController < ApplicationController
 	end
 
 	def update
-	respond_to do |format|
-		if @template.update(template_params)
-			format.json { render :show, status: :ok }
-		else
-			format.json { render json: @template.errors, status: :unprocessable_entity }
+		respond_to do |format|
+			if @template.update(template_params)
+				format.json { render :show, status: :ok }
+			else
+				format.json { render json: @template.errors, status: :unprocessable_entity }
+			end
 		end
 	end
 
