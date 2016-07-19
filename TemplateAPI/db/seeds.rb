@@ -5,3 +5,22 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Template.create(
+	name: 'light',
+	css: [
+		{ body: 'color:blue;' },
+		{ h1: 'color:red'}
+	],
+	html: '<h1>Hello World</h1> <p>testtesttest</p>'
+	)
+
+	Section.create(
+		name: 'light',
+		template_id: 1,
+		css: [
+			{ body: 'color:blue;' },
+			{ h1: 'color:red'}
+		],
+		html: '<h1>Hello World</h1> <p>testtesttest</p>'
+		)

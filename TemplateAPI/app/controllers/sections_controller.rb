@@ -6,12 +6,13 @@ class SectionsController < ApplicationController
 	end
 
 	def update
-
-	respond_to do |format|
-		if @section.update(section_params)
-			format.json { render :show, status: :ok }
-		else
-			format.json { render json: @section.errors, status: :unprocessable_entity }
+		# @template = Template.find(params[:template_id])
+		respond_to do |format|
+			if @section.update(section_params)
+				format.json { render :show, status: :ok }
+			else
+				format.json { render json: @section.errors, status: :unprocessable_entity }
+			end
 		end
 	end
 
