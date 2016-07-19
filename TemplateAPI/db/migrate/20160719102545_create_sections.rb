@@ -1,9 +1,10 @@
-class CreateTemplates < ActiveRecord::Migration
+class CreateSections < ActiveRecord::Migration
   def change
-    create_table :templates do |t|
+    create_table :sections do |t|
       t.string :name
       t.string :css
       t.string :html
+      t.references :template
 
       t.timestamps null: false
     end
